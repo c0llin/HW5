@@ -78,6 +78,14 @@ Partial Class _Default
         loanGridView.DataBind()
 
 
-    End Sub
+    End Sub 'btnCalcClick
+    Sub reset()
+        tbAnnualInterest.Text = String.Empty
+        tbLoanAmt.Text = String.Empty
+        tbLoanTerm.Text = String.Empty
 
+    End Sub ' reset
+    Protected Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        reset()
+    End Sub 'btnReset_Click
 End Class
