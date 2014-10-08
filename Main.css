@@ -2,7 +2,7 @@
     border-style: none;
     border-color: inherit;
     border-width: 0px;
-width: 57%;
+    width: 57%;
     padding: 10px;
     margin: 0;
     text-align:left;
@@ -37,4 +37,13 @@ body {
       font-size: 0.9em; }
 .gridview .alt{
     background-color:lightgreen;
+}
+#calc {
+    border-style: solid ;
+    border-color: black;
+    border-width: 2px;
+    width: auto;
+    padding: 5px;
+    margin: 1px;
+    text-align:left;
 }

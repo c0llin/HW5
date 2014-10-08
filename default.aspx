@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div id="calc">
     
     <h1>Collin's Mortgage Calculator</h1>
        
