@@ -12,41 +12,47 @@
     <div>
     
     <h1>Collin's Mortgage Calculator</h1>
-       <h2>Please enter all fields for load calulation</h2>
+       
+               
+           
+        
         
         <br /><br />
      
-        Loan Amount:*<asp:TextBox ID="tbLoanAmt" runat="server" Width="114px" style="margin-left: 46px" ></asp:TextBox>
+        Loan Amount:*<asp:TextBox ID="tbLoanAmt" runat="server" Width="112px" style="margin-left: 46px" ></asp:TextBox>
                   
-        <asp:RegularExpressionValidator ID="valLoan" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="valLoan" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
                   
         <br /><br />      
         
-        Annual Interest %:* <asp:TextBox ID="tbAnnualInterest" runat="server" style="margin-left: 17px" Width="114px" ></asp:TextBox>
+        Annual Interest %:* <asp:TextBox ID="tbAnnualInterest" runat="server" style="margin-left: 17px" Width="112px" ></asp:TextBox>
         
-        <asp:RegularExpressionValidator ID="valInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d"></asp:RegularExpressionValidator>
-        
-        <br /><br />
-
-        Loan Term (Yrs):* <asp:TextBox ID="tbLoanTerm" runat="server" Width="114px" style="margin-left: 23px" ></asp:TextBox>
-        
-        <asp:RegularExpressionValidator ID="valYrs" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="valInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
         
         <br /><br />
 
-        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" Width="119px" />
+        Loan Term (Yrs):* <asp:TextBox ID="tbLoanTerm" runat="server" Width="112px" style="margin-left: 23px" ></asp:TextBox>
         
-        <asp:Button ID="btnReset" runat="server" Text="Reset" Width="119px" />
+        <asp:RegularExpressionValidator ID="valYrs" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
         
         <br /><br />
-                
+
+        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" Width="133px" />
+        
+        <asp:Button ID="btnReset" runat="server" Text="Reset" Width="127px" />
+        
+        <br /><br />
+        <%If Not IsPostBack Then%>
+        <p>Please enter all fields for load calulation</p>
+        <%Else%>       
         Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
         
         <br /><br />
         
-        <asp:GridView ID="loanGridView" runat="server" Width="256px" cssclass="gridview">
+        <asp:GridView ID="loanGridView" runat="server" Width="259px" cssclass="gridview">
             <alternatingrowstyle cssclass="alt" />
         </asp:GridView>
+           <%End If%>
         </div>
     </form>
 </body>

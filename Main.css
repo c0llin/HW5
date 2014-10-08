@@ -1,7 +1,9 @@
 ﻿form {
-    width: 70%;
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+width: 57%;
     padding: 10px;
-    border: 0px;
     margin: 0;
     text-align:left;
 }
