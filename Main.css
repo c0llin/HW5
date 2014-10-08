@@ -1,0 +1,38 @@
+﻿form {
+    width: 70%;
+    padding: 10px;
+    border: 0px;
+    margin: 0;
+    text-align:left;
+}
+body {
+    background-color: lightgrey; 
+}
+.TextBox {
+    text-align: left;
+    float: right;
+    width:20%;
+}
+
+.gridview {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:Calibri; color: #474747;}
+
+.gridview td {
+
+      padding: 2px;
+
+      border: solid 1px #c1c1c1; }
+
+.gridview th  {
+
+      padding : 4px 2px;
+
+      color: #fff;
+
+      background-color:red;
+
+      border-left: solid 1px #525252;
+
+      font-size: 0.9em; }
+.gridview .alt{
+    background-color:lightgreen;
+}
