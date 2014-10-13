@@ -21,19 +21,19 @@
      
         Loan Amount:*<asp:TextBox ID="tbLoanAmt" runat="server" Width="112px" style="margin-left: 46px" ></asp:TextBox>
                   
-        <asp:RegularExpressionValidator ID="valLoan" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="rvfLoan" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="Please Enter Load amount"></asp:RequiredFieldValidator>
                   
         <br /><br />      
         
         Annual Interest %:* <asp:TextBox ID="tbAnnualInterest" runat="server" style="margin-left: 17px" Width="112px" ></asp:TextBox>
         
-        <asp:RegularExpressionValidator ID="valInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="rfvInterest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="Please Enter Interest Rate"></asp:RequiredFieldValidator>
         
         <br /><br />
 
         Loan Term (Yrs):* <asp:TextBox ID="tbLoanTerm" runat="server" Width="112px" style="margin-left: 23px" ></asp:TextBox>
         
-        <asp:RegularExpressionValidator ID="valYrs" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="RegularExpressionValidator" ValidationExpression="^\d" Enabled="False"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="rvfYear" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="Please Enter Year(s)"></asp:RequiredFieldValidator>
         
         <br /><br />
 
@@ -43,16 +43,15 @@
         
         <br /><br />
         <%If Not IsPostBack Then%>
-        <p>Please enter all fields for load calulation</p>
-        <%Else%>       
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        <p>Please enter all fields for loan calulation</p>
+        <%Else%>Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
         
         <br /><br />
         
         <asp:GridView ID="loanGridView" runat="server" Width="259px" cssclass="gridview">
             <alternatingrowstyle cssclass="alt" />
         </asp:GridView>
-           <%End If%>
+        <%End If%>
         </div>
     </form>
 </body>
